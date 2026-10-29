@@ -72,11 +72,22 @@ p { margin: 0 0 1em; }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 60px; }
 .brand { font-weight: 700; color: var(--text); white-space: nowrap; }
 .brand:hover { text-decoration: none; color: var(--accent); }
-.nav { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+.nav { display: flex; gap: 4px; margin-left: auto; overflow-x: auto; scrollbar-width: none; }
 .nav::-webkit-scrollbar { display: none; }
 .nav a { color: var(--muted); padding: 6px 10px; border-radius: 8px; font-size: .95rem; white-space: nowrap; }
 .nav a:hover { color: var(--text); background: var(--surface-2); text-decoration: none; }
-.header-right { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.controls { display: flex; align-items: center; gap: 10px; flex: none; }
+
+/* Language switch */
+.i18n-pending body { visibility: hidden; }
+.lang-switch { display: flex; padding: 2px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface-2); }
+.lang-switch button {
+  border: 0; border-radius: 999px; padding: 6px 9px; cursor: pointer;
+  background: transparent; color: var(--muted);
+  font-family: inherit; font-size: .75rem; font-weight: 700; line-height: 1; letter-spacing: .04em;
+}
+.lang-switch button:hover { color: var(--text); }
+.lang-switch button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
 
 /* Theme switch */
 .theme-switch {
@@ -216,10 +227,10 @@ footer { padding: 32px 0; border-top: 1px solid var(--border); color: var(--mute
 }
 @media (max-width: 520px) {
   .wrap { padding: 0 16px; }
-  .brand { display: none; }
-  .site-header .wrap { justify-content: flex-end; }
-  .header-right { width: 100%; justify-content: space-between; gap: 8px; }
-  .nav { gap: 0; }
-  .nav a { padding: 6px 6px; font-size: .85rem; }
+  html { scroll-padding-top: 112px; }
+  .site-header .wrap { flex-wrap: wrap; height: auto; padding-top: 10px; padding-bottom: 6px; row-gap: 6px; }
+  .controls { order: 2; }
+  .nav { order: 3; width: 100%; margin-left: -7px; gap: 0; }
+  .nav a { padding: 6px 7px; font-size: .9rem; }
   .projects { grid-template-columns: 1fr; }
 }

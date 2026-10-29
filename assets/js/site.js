@@ -18,6 +18,36 @@ if (themeSwitch) {
   });
 }
 
+// Language switch: English lives in the markup, Italian in data-it attributes
+var langButtons = document.querySelectorAll('.lang-switch button');
+var langAttrs = { label: 'aria-label', alt: 'alt' };
+var setLang = function (lang) {
+  var it = lang === 'it';
+  document.querySelectorAll('[data-it]').forEach(function (el) {
+    if (el.dataset.en === undefined) el.dataset.en = el.textContent;
+    el.textContent = it ? el.dataset.it : el.dataset.en;
+  });
+  Object.keys(langAttrs).forEach(function (key) {
+    var attr = langAttrs[key];
+    var itKey = 'it' + key.charAt(0).toUpperCase() + key.slice(1);
+    var enKey = 'en' + key.charAt(0).toUpperCase() + key.slice(1);
+    document.querySelectorAll('[data-it-' + key + ']').forEach(function (el) {
+      if (el.dataset[enKey] === undefined) el.dataset[enKey] = el.getAttribute(attr) || '';
+      el.setAttribute(attr, it ? el.dataset[itKey] : el.dataset[enKey]);
+    });
+  });
+  document.documentElement.lang = lang;
+  langButtons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
+  document.documentElement.classList.remove('i18n-pending');
+};
+setLang(document.documentElement.lang === 'it' ? 'it' : 'en');
+langButtons.forEach(function (b) {
+  b.addEventListener('click', function () {
+    setLang(b.dataset.lang);
+    try { localStorage.setItem('lang', b.dataset.lang); } catch (e) {}
+  });
+});
+
 // YouTube facade: loads the player only on click
 document.querySelectorAll('.video[data-yt]').forEach(function (el) {
   var id = el.dataset.yt;

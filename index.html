@@ -13,22 +13,26 @@
   <link rel="icon" href="assets/img/favicon.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="stylesheet" href="assets/css/site.css">
-  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <script>try{var d=document.documentElement,t=localStorage.getItem("theme");if(t)d.setAttribute("data-theme",t);var l=localStorage.getItem("lang")||((navigator.language||"").slice(0,2)=="it"?"it":"en");if(l=="it"){d.lang="it";d.classList.add("i18n-pending");setTimeout(function(){d.classList.remove("i18n-pending")},2000)}}catch(e){}</script>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <a class="skip" href="#main" data-it="Vai al contenuto">Skip to content</a>
 
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="#top">Nicolas Nucifora</a>
-      <div class="header-right">
-        <nav class="nav" aria-label="Main">
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <button class="theme-switch" type="button" role="switch" aria-checked="true" aria-label="Dark mode">
+      <nav class="nav" aria-label="Main">
+        <a href="#about" data-it="Chi sono">About</a>
+        <a href="#experience" data-it="Esperienza">Experience</a>
+        <a href="#projects" data-it="Progetti">Projects</a>
+        <a href="#contact" data-it="Contatti">Contact</a>
+      </nav>
+      <div class="controls">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="it" aria-pressed="false">IT</button>
+        </div>
+        <button class="theme-switch" type="button" role="switch" aria-checked="true" aria-label="Dark mode" data-it-label="Tema scuro">
           <svg class="icon sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
           <svg class="icon moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
           <span class="knob"></span>
@@ -43,28 +47,27 @@
         <div>
           <p class="eyebrow">Unreal Engine 5 · C++</p>
           <h1>Nicolas Nucifora</h1>
-          <p class="role"><strong>AI Programmer</strong> at Stormind Games.<br>Enemy AI and gameplay systems for shipped titles on PC and consoles.</p>
+          <p class="role"><strong>AI Programmer</strong><span data-it=" presso Stormind Games."> at Stormind Games.</span><br><span data-it="IA dei nemici e sistemi di gameplay per titoli pubblicati su PC e console.">Enemy AI and gameplay systems for shipped titles on PC and consoles.</span></p>
           <div class="actions">
             <a class="btn btn-primary" href="assets/document/Nicolas_Nucifora_CV.pdf" download>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 21h14"/></svg>
-              Download CV
+              <span data-it="Scarica CV">Download CV</span>
             </a>
-            <a class="btn" href="#projects">View projects</a>
+            <a class="btn" href="#projects" data-it="Vedi progetti">View projects</a>
           </div>
         </div>
-        <img class="hero-photo" src="assets/img/profile.jpg" width="640" height="640" alt="Portrait of Nicolas Nucifora">
+        <img class="hero-photo" src="assets/img/profile.jpg" width="640" height="640" alt="Portrait of Nicolas Nucifora" data-it-alt="Ritratto di Nicolas Nucifora">
       </div>
     </section>
 
     <section id="about">
       <div class="wrap about-grid">
         <div>
-          <p class="eyebrow">About</p>
-          <h2 class="section-title">Building enemies that hunt, hear and adapt</h2>
-          <p>AI Programmer with 4+ years of professional experience in Unreal Engine 5 and C++, and a BSc in Computer Science.</p>
-          <p>I have shipped multiple commercial titles on PC and consoles, focusing on AI programming and gameplay systems: A Quiet Place: The Road Ahead, Batora: Lost Haven and Remothered: Red Nun's Legacy. I work hands-on with Behavior Trees, EQS, AI Perception and the Unreal navigation system.</p>
+          <p class="eyebrow" data-it="Chi sono">About</p>
+          <p data-it="AI Programmer con oltre 4 anni di esperienza professionale in Unreal Engine 5 e C++ e una laurea triennale in Informatica.">AI Programmer with 4+ years of professional experience in Unreal Engine 5 and C++, and a BSc in Computer Science.</p>
+          <p data-it="Ho lavorato a diversi titoli commerciali pubblicati su PC e console, occupandomi di programmazione dell'IA e sistemi di gameplay: A Quiet Place: The Road Ahead, Batora: Lost Haven e Remothered: Red Nun's Legacy. Lavoro ogni giorno con Behavior Tree, EQS, AI Perception e il sistema di navigazione di Unreal.">I have shipped multiple commercial titles on PC and consoles, focusing on AI programming and gameplay systems: A Quiet Place: The Road Ahead, Batora: Lost Haven and Remothered: Red Nun's Legacy. I work hands-on with Behavior Trees, EQS, AI Perception and the Unreal navigation system.</p>
           <div class="skills">
-            <h3>Game development</h3>
+            <h3 data-it="Sviluppo videogiochi">Game development</h3>
             <ul class="tags">
               <li>Unreal Engine 5</li>
               <li>C++</li>
@@ -77,7 +80,7 @@
               <li>Navigation System</li>
               <li>VR Development</li>
             </ul>
-            <h3>Languages &amp; tools</h3>
+            <h3 data-it="Linguaggi e strumenti">Languages &amp; tools</h3>
             <ul class="tags">
               <li>C#</li>
               <li>Apex</li>
@@ -90,42 +93,42 @@
           </div>
         </div>
         <ul class="facts">
-          <li><span>Role</span><span>AI Programmer</span></li>
-          <li><span>Experience</span><span>4+ years</span></li>
-          <li><span>Based in</span><span>Taormina, Sicily</span></li>
-          <li><span>Birthday</span><span>1 April 1997</span></li>
-          <li><span>Education</span><span>BSc Computer Science, 110/110</span></li>
-          <li><span>Languages</span><span>Italian (native), English (B2)</span></li>
-          <li><span>Platforms</span><span>PC, PS4/PS5, Xbox One, Xbox Series X|S, Switch, Switch 2</span></li>
+          <li><span data-it="Ruolo">Role</span><span>AI Programmer</span></li>
+          <li><span data-it="Esperienza">Experience</span><span data-it="4+ anni">4+ years</span></li>
+          <li><span data-it="Città">Based in</span><span data-it="Taormina, Sicilia">Taormina, Sicily</span></li>
+          <li><span data-it="Data di nascita">Birthday</span><span data-it="1 aprile 1997">1 April 1997</span></li>
+          <li><span data-it="Formazione">Education</span><span data-it="Laurea in Informatica, 110/110">BSc Computer Science, 110/110</span></li>
+          <li><span data-it="Lingue">Languages</span><span data-it="Italiano (madrelingua), inglese (B2)">Italian (native), English (B2)</span></li>
+          <li><span data-it="Piattaforme">Platforms</span><span>PC, PS4/PS5, Xbox One, Xbox Series X|S, Switch, Switch 2</span></li>
         </ul>
       </div>
     </section>
 
     <section id="experience">
       <div class="wrap">
-        <p class="eyebrow">Experience</p>
-        <h2 class="section-title">Career</h2>
+        <p class="eyebrow" data-it="Esperienza">Experience</p>
+        <h2 class="section-title" data-it="Percorso">Career</h2>
         <div class="timeline">
           <article class="job">
-            <p class="when">Jul 2023 - Present</p>
+            <p class="when" data-it="Lug 2023 - Oggi">Jul 2023 - Present</p>
             <div>
               <h3>AI Programmer</h3>
               <p class="where">Stormind Games, Catania</p>
               <ul>
-                <li>Developed AI agents and gameplay systems in Unreal Engine 5 and C++.</li>
-                <li>Shipped work on <a href="Remothered.html">Remothered: Red Nun's Legacy</a>, <a href="AQuietPlace.html">A Quiet Place: The Road Ahead</a> and <a href="Batora.html">Batora: Lost Haven</a>.</li>
-                <li>Collaborated with cross-functional teams using Perforce, Git, Jira and Agile workflows.</li>
+                <li data-it="Sviluppo di agenti IA e sistemi di gameplay in Unreal Engine 5 e C++.">Developed AI agents and gameplay systems in Unreal Engine 5 and C++.</li>
+                <li><span data-it="Ho contribuito a">Shipped work on</span> <a href="Remothered.html">Remothered: Red Nun's Legacy</a>, <a href="AQuietPlace.html">A Quiet Place: The Road Ahead</a> <span data-it="e">and</span> <a href="Batora.html">Batora: Lost Haven</a>.</li>
+                <li data-it="Collaborazione con team multidisciplinari usando Perforce, Git, Jira e metodologie Agile.">Collaborated with cross-functional teams using Perforce, Git, Jira and Agile workflows.</li>
               </ul>
             </div>
           </article>
           <article class="job">
-            <p class="when">Mar 2022 - Jul 2023</p>
+            <p class="when" data-it="Mar 2022 - Lug 2023">Mar 2022 - Jul 2023</p>
             <div>
               <h3>Unreal Engine Developer</h3>
               <p class="where">Red Raion, Catania</p>
               <ul>
-                <li>Developed a VR serious game for Oculus Quest 2 in Unreal Engine 5 and C++.</li>
-                <li>Designed and implemented 11 minigames for <a href="Smartrehab.html">Smart Rehab</a>, covering motor and cognitive rehabilitation exercises.</li>
+                <li data-it="Sviluppo di un serious game VR per Oculus Quest 2 in Unreal Engine 5 e C++.">Developed a VR serious game for Oculus Quest 2 in Unreal Engine 5 and C++.</li>
+                <li><span data-it="Progettazione e sviluppo di 11 minigiochi per">Designed and implemented 11 minigames for</span> <a href="Smartrehab.html">Smart Rehab</a><span data-it=", con esercizi di riabilitazione motoria e cognitiva.">, covering motor and cognitive rehabilitation exercises.</span></li>
               </ul>
             </div>
           </article>
@@ -133,19 +136,19 @@
             <p class="when">Apr 2021 - Mar 2022</p>
             <div>
               <h3>Salesforce Developer</h3>
-              <p class="where">Deloitte, Milan</p>
+              <p class="where" data-it="Deloitte, Milano">Deloitte, Milan</p>
               <ul>
-                <li>Built business software solutions on the Salesforce platform using Apex, Visualforce and Lightning components.</li>
+                <li data-it="Sviluppo di soluzioni software aziendali sulla piattaforma Salesforce con Apex, Visualforce e componenti Lightning.">Built business software solutions on the Salesforce platform using Apex, Visualforce and Lightning components.</li>
               </ul>
             </div>
           </article>
           <article class="job">
             <p class="when">2017 - 2021</p>
             <div>
-              <h3>BSc in Computer Science, 110/110</h3>
-              <p class="where">University of Catania</p>
+              <h3 data-it="Laurea triennale in Informatica, 110/110">BSc in Computer Science, 110/110</h3>
+              <p class="where" data-it="Università di Catania">University of Catania</p>
               <ul>
-                <li>Relevant coursework: Video Game Development (C#, Unity), Programming I &amp; II (C++, data structures), Software Engineering (Java, design patterns).</li>
+                <li data-it="Corsi principali: Sviluppo di videogiochi (C#, Unity), Programmazione I e II (C++, strutture dati), Ingegneria del software (Java, design pattern).">Relevant coursework: Video Game Development (C#, Unity), Programming I &amp; II (C++, data structures), Software Engineering (Java, design patterns).</li>
               </ul>
             </div>
           </article>
@@ -155,8 +158,8 @@
 
     <section id="projects">
       <div class="wrap">
-        <p class="eyebrow">Projects</p>
-        <h2 class="section-title">Selected work</h2>
+        <p class="eyebrow" data-it="Progetti">Projects</p>
+        <h2 class="section-title" data-it="Lavori selezionati">Selected work</h2>
         <div class="projects">
           <a class="card" href="Remothered.html">
             <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3335310/5582eceba79cd68b39dea18b87376e83ed798a2e/capsule_616x353.jpg" width="616" height="353" loading="lazy" alt="Remothered: Red Nun's Legacy key art">
@@ -164,7 +167,7 @@
               <h3>Remothered: Red Nun's Legacy</h3>
               <p class="meta">Stormind Games · Soft Source · UE5 · 2026</p>
               <p class="meta">AI Programmer</p>
-              <span class="more">Details &rarr;</span>
+              <span class="more" data-it="Dettagli &rarr;">Details &rarr;</span>
             </div>
           </a>
           <a class="card" href="AQuietPlace.html">
@@ -173,7 +176,7 @@
               <h3>A Quiet Place: The Road Ahead</h3>
               <p class="meta">Stormind Games · Saber Interactive · UE5 · 2024</p>
               <p class="meta">AI Programmer</p>
-              <span class="more">Details &rarr;</span>
+              <span class="more" data-it="Dettagli &rarr;">Details &rarr;</span>
             </div>
           </a>
           <a class="card" href="Batora.html">
@@ -182,16 +185,16 @@
               <h3>Batora: Lost Haven</h3>
               <p class="meta">Stormind Games · Team17 · UE4 · 2022</p>
               <p class="meta">AI Programmer</p>
-              <span class="more">Details &rarr;</span>
+              <span class="more" data-it="Dettagli &rarr;">Details &rarr;</span>
             </div>
           </a>
           <a class="card" href="Smartrehab.html">
             <img src="assets/img/projects/smartrehab/cover.jpg" width="960" height="540" loading="lazy" alt="Smart Rehab logo">
             <div class="card-body">
               <h3>Smart Rehab</h3>
-              <p class="meta">Red Raion · VR serious game · UE5 · 2023</p>
+              <p class="meta" data-it="Red Raion · Serious game VR · UE5 · 2023">Red Raion · VR serious game · UE5 · 2023</p>
               <p class="meta">Unreal Engine Developer</p>
-              <span class="more">Details &rarr;</span>
+              <span class="more" data-it="Dettagli &rarr;">Details &rarr;</span>
             </div>
           </a>
         </div>
@@ -200,9 +203,9 @@
 
     <section id="contact">
       <div class="wrap">
-        <p class="eyebrow">Contact</p>
-        <h2 class="section-title">Let's talk</h2>
-        <p class="muted">Contact me for any information.</p>
+        <p class="eyebrow" data-it="Contatti">Contact</p>
+        <h2 class="section-title" data-it="Parliamone">Let's talk</h2>
+        <p class="muted" data-it="Contattami per qualsiasi informazione.">Contact me for any information.</p>
         <div class="contact-links">
           <a class="btn btn-primary" href="mailto:nuciforanicolas@gmail.com">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
