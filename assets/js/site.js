@@ -1,3 +1,23 @@
+// Theme switch: follows the system until the visitor picks a theme
+var themeSwitch = document.querySelector('.theme-switch');
+if (themeSwitch) {
+  var root = document.documentElement;
+  var media = window.matchMedia('(prefers-color-scheme: light)');
+  var isDark = function () {
+    var forced = root.getAttribute('data-theme');
+    return forced ? forced === 'dark' : !media.matches;
+  };
+  var sync = function () { themeSwitch.setAttribute('aria-checked', String(isDark())); };
+  sync();
+  media.addEventListener('change', sync);
+  themeSwitch.addEventListener('click', function () {
+    var next = isDark() ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    sync();
+  });
+}
+
 // YouTube facade: loads the player only on click
 document.querySelectorAll('.video[data-yt]').forEach(function (el) {
   var id = el.dataset.yt;

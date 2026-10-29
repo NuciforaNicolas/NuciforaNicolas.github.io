@@ -13,7 +13,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
+  :root:not([data-theme="dark"]) {
     --bg: #f6f7f9;
     --surface: #ffffff;
     --surface-2: #eef0f3;
@@ -24,6 +24,18 @@
     --accent-ink: #ffffff;
     color-scheme: light;
   }
+}
+
+:root[data-theme="light"] {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --surface-2: #eef0f3;
+  --border: #dde1e6;
+  --text: #15181d;
+  --muted: #5b6470;
+  --accent: #d9481c;
+  --accent-ink: #ffffff;
+  color-scheme: light;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -64,6 +76,24 @@ p { margin: 0 0 1em; }
 .nav::-webkit-scrollbar { display: none; }
 .nav a { color: var(--muted); padding: 6px 10px; border-radius: 8px; font-size: .95rem; white-space: nowrap; }
 .nav a:hover { color: var(--text); background: var(--surface-2); text-decoration: none; }
+.header-right { display: flex; align-items: center; gap: 12px; min-width: 0; }
+
+/* Theme switch */
+.theme-switch {
+  position: relative; flex: none; width: 56px; height: 30px; padding: 0; cursor: pointer;
+  border: 1px solid var(--border); border-radius: 999px; background: var(--surface-2);
+  transition: border-color .2s;
+}
+.theme-switch:hover, .theme-switch:focus-visible { border-color: var(--accent); }
+.theme-switch .icon { position: absolute; top: 50%; width: 14px; height: 14px; transform: translateY(-50%); color: var(--muted); }
+.theme-switch .sun { left: 7px; }
+.theme-switch .moon { right: 7px; }
+.theme-switch .knob {
+  position: absolute; top: 3px; left: 3px; width: 22px; height: 22px; border-radius: 50%;
+  background: var(--accent); transition: transform .2s ease;
+}
+.theme-switch[aria-checked="true"] .knob { transform: translateX(26px); }
+@media (prefers-reduced-motion: reduce) { .theme-switch .knob { transition: none; } }
 
 /* Sections */
 section { padding: 72px 0; }
@@ -187,6 +217,9 @@ footer { padding: 32px 0; border-top: 1px solid var(--border); color: var(--mute
 @media (max-width: 520px) {
   .wrap { padding: 0 16px; }
   .brand { display: none; }
-  .site-header .wrap { justify-content: center; }
+  .site-header .wrap { justify-content: flex-end; }
+  .header-right { width: 100%; justify-content: space-between; gap: 8px; }
+  .nav { gap: 0; }
+  .nav a { padding: 6px 6px; font-size: .85rem; }
   .projects { grid-template-columns: 1fr; }
 }
