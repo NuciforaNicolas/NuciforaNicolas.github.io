@@ -1,180 +1,83 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>A Quiet Place: The Road Ahead</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: iPortfolio - v3.0.1
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A Quiet Place: The Road Ahead | Nicolas Nucifora</title>
+  <meta name="description" content="Enemy AI programming on A Quiet Place: The Road Ahead (Stormind Games, Unreal Engine 5).">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:image" content="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2233120/capsule_616x353.jpg">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
-
 <body>
+  <a class="skip" href="#main">Skip to content</a>
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="d-flex flex-column">
-
-      <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Nicolas Nucifora</a></h1>
-        <div class="social-links mt-3 text-center">
-          <a href="https://www.instagram.com/nicolasnucifora97" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/nuciforanicolas" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://github.com/NuciforaNicolas?tab=repositories" class="github"><i class="bx bxl-github"></i></a>
-        </div>
-      </div>
-
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="index.html#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="index.html#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="index.html#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="index.html#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-          <li><a href="index.html#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Nicolas Nucifora</a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html#about">About</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
     </div>
-  </header><!-- End Header -->
+  </header>
 
-  <main id="main">
+  <main id="main" class="wrap">
+    <div class="project-head">
+      <a class="back" href="index.html#projects">&larr; All projects</a>
+      <p class="eyebrow">AI Programmer</p>
+      <h1>A Quiet Place: The Road Ahead</h1>
+    </div>
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
+    <div class="project-grid">
+      <div>
+        <button class="video" type="button" data-yt="riegOv5eRuY" aria-label="Play A Quiet Place: The Road Ahead release date trailer"></button>
 
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>A Quiet Place: The Road Ahead</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>A Quiet Place: The Road Ahead</li>
-          </ol>
+        <h2>The game</h2>
+        <p>A Quiet Place: The Road Ahead is a single-player horror adventure game inspired by the critically acclaimed movie franchise. It tells a unique survivor story after an invasion of deadly creatures: a young woman must endure a treacherous apocalypse in the midst of family conflicts, while coming to terms with her own inner fears.</p>
+
+        <h2>My contribution</h2>
+        <ul>
+          <li>Played a key role in developing the main enemy AI, a sound-driven hunter with patrol, hunt and chase behaviors, using Behavior Trees, EQS and the Unreal navigation system.</li>
+          <li>Engineered the microphone noise detection system, which turns the player's real voice into in-game noise events perceived by the enemy, a feature highly praised by players.</li>
+          <li>Created a dynamic difficulty system that adapts the enemy's hearing sensitivity, movement speed and other parameters to the player's skill.</li>
+          <li>Implemented a hint system that guides the player toward objectives and useful items.</li>
+        </ul>
+
+        <h2>Gallery</h2>
+        <div class="gallery">
+          <a href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2233120/ss_20124a549dabb34c68b12591fc9727ec281e8af8.1920x1080.jpg"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2233120/ss_20124a549dabb34c68b12591fc9727ec281e8af8.600x338.jpg" width="600" height="338" loading="lazy" alt="A Quiet Place: The Road Ahead screenshot 1"></a>
+          <a href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2233120/ss_d2f9a3111ed9d75231a0147e69e1cbadd01ce721.1920x1080.jpg"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2233120/ss_d2f9a3111ed9d75231a0147e69e1cbadd01ce721.600x338.jpg" width="600" height="338" loading="lazy" alt="A Quiet Place: The Road Ahead screenshot 2"></a>
+          <a href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2233120/ss_59edab89d09d63940091a02f694c885ee3651a9e.1920x1080.jpg"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2233120/ss_59edab89d09d63940091a02f694c885ee3651a9e.600x338.jpg" width="600" height="338" loading="lazy" alt="A Quiet Place: The Road Ahead screenshot 3"></a>
+          <a href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2233120/ss_56c4b71985b20d79f94120eccc24bc3ef868516e.1920x1080.jpg"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2233120/ss_56c4b71985b20d79f94120eccc24bc3ef868516e.600x338.jpg" width="600" height="338" loading="lazy" alt="A Quiet Place: The Road Ahead screenshot 4"></a>
+          <a href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2233120/ss_1d5f63031b6a8765bf88b905555624edcb5574f9.1920x1080.jpg"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2233120/ss_1d5f63031b6a8765bf88b905555624edcb5574f9.600x338.jpg" width="600" height="338" loading="lazy" alt="A Quiet Place: The Road Ahead screenshot 5"></a>
+          <a href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2233120/ss_3840415966ed830f16fd49a2f806e89b684a83e5.1920x1080.jpg"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2233120/ss_3840415966ed830f16fd49a2f806e89b684a83e5.600x338.jpg" width="600" height="338" loading="lazy" alt="A Quiet Place: The Road Ahead screenshot 6"></a>
         </div>
 
       </div>
-    </section><!-- End Breadcrumbs -->
 
-    <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
+      <aside class="info">
+        <dl>
+          <dt>Developer</dt><dd>Stormind Games</dd>
+          <dt>Publisher</dt><dd>Saber Interactive</dd>
+          <dt>Genre</dt><dd>First-person horror adventure</dd>
+          <dt>Platforms</dt><dd>PC, PS5, Xbox Series X|S</dd>
+          <dt>Engine</dt><dd>Unreal Engine 5</dd>
+          <dt>Release</dt><dd>17 October 2024</dd>
+          <dt>Website</dt><dd><a href="https://aquietplace.game/" rel="noopener">aquietplace.game</a></dd>
+          <dt>Store</dt><dd><a href="https://store.steampowered.com/app/2233120/" rel="noopener">Steam</a></dd>
+        </dl>
+      </aside>
+    </div>
+  </main>
 
-        <div class="row gy-4">
-
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper-container">
-              <div class="swiper-wrapper align-items-center">
-                
-                <div class="swiper-slide">
-                  <iframe width="800" height="500" src="https://www.youtube.com/embed/riegOv5eRuY" title="A Quiet Place: The Road Ahead - Release Date Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/AQP/screenshot1.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/AQP/screenshot2.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/AQP/screenshot3.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/AQP/screenshot4.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/AQP/screenshot6.jpg" alt="">
-                </div>
-
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Developer</strong>: Stormind Games®</li>
-                <li><strong>Publisher</strong>: Saber Interactive®</li>
-                <li><strong>Genre</strong>: First-Person Horror Adventure</li>
-                <li><strong>Platforms</strong>: PC, PS5, Xbox Series X|S</li>
-                <li><strong>Engine</strong>: Unreal Engine 5</li>
-                <li><strong>Release Date</strong>: 10/17/2024</li>
-                <li><strong>Web-site</strong>: <a href="https://aquietplace.game/">A Quiet Place: The Road Ahead</a></li>
-              </ul>
-            </div>
-            <div class="portfolio-description">
-              <h2>Game Details</h2>
-              <p>
-                A Quiet Place: The Road Ahead is a single-player horror adventure game inspired by the critically acclaimed blockbuster movie franchise that highlights a unique survivor story after an invasion of deadly creatures. In this exclusive spin-off, experience the journey of a young woman who must endure a treacherous apocalypse in the midst of interpersonal family conflicts, all while coming to terms with her own inner fears.
-              </p>
-              <p>
-                <strong>System/AI Programmer</strong>
-                <ul>
-                  <li>Developed the intelligent behaviour of the monster, using Unreal Engine’s behaviour tree, Environment Query System and navigation system.</li>
-                  <li>Developed the “Dynamic difficulty system” whose task is to change the difficulty of defeating the monsterbased on Player’s skills.</li>
-                  <li>Developed the “Microphone noise detection system”, whose let the monster to hear the player’s voice.</li>
-                  <li>Developed the “Hint system”, to help the player find the objective and useful items.</li>
-                </ul>
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Details Section -->
-
-  </main><!-- End #main -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  <footer>
+    <div class="wrap">&copy; 2026 Nicolas Nucifora</div>
+  </footer>
+  <script src="assets/js/site.js" defer></script>
 </body>
-
 </html>

@@ -1,37 +1,23 @@
-## Welcome to GitHub Pages
+# nuciforanicolas.github.io
 
-You can use the [editor on GitHub](https://github.com/NuciforaNicolas/NuciforaNicolas.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+Personal portfolio of Nicolas Nucifora, System & AI Programmer.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Static site, no build step and no dependencies: plain HTML, one CSS file (`assets/css/site.css`) and one small script (`assets/js/site.js`, used by project pages for the video player and the image gallery).
 
-### Markdown
+## Structure
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- `index.html`: home (about, experience, projects, contact)
+- `AQuietPlace.html`, `Batora.html`, `Smartrehab.html`: project pages
+- Project images for shipped games are official Steam store assets, loaded from the Steam CDN (capsule 616x353 for cards, screenshots 600x338 as thumbnails and 1920x1080 in the lightbox)
+- `assets/img/projects/smartrehab/`: local images for Smart Rehab, which has no store page
+- `assets/document/Nicolas_Nucifora_CV.pdf`: CV
 
-```markdown
-Syntax highlighted code block
+## Adding a project
 
-# Header 1
-## Header 2
-### Header 3
+1. Copy one of the project pages and update texts, video id (`data-yt`) and gallery.
+2. Use the official images from the game store page (Steam: `store.steampowered.com/api/appdetails?appids=<id>`), or add local JPEGs (max 1600px wide) to `assets/img/projects/<project>/`.
+3. Add a `.card` in the `#projects` section of `index.html`.
 
-- Bulleted
-- List
+## Local preview
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/NuciforaNicolas/NuciforaNicolas.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Open `index.html` in a browser, or run any static server from the repository root.
